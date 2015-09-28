@@ -1,0 +1,43 @@
+<ion-view view-title="Details">
+  <ion-content>
+<div ng-show="active == true">
+<button class="button button-light button-block btn-default" ng-click="equals()">
+  <i class="icon ion-lightbulb"></i>&nbsp;Recommendation</button>
+<div ng-show="replan == true" class="well">
+<label ng-if="message == 3">[after]You can save {{difference| currency:"INR₹"}} if you travel on {{afteroriginaldate}} </label>
+<label ng-if="message == 2">[before]You can save {{difference| currency:"INR₹"}} if you travel on {{beforeoriginaldate}} </label>
+<label ng-if="message == 1">This is the BEST price available in this week</label>
+<!-- <button ng-show = "replan == true" class="button button-outline button-calm button-small pull-right" ui-sref="app.playlists" type="button">
+  ← Go Back and <span class="badge">Re-plan</span>
+</button> -->
+
+</div>
+</div>
+    <div class="panel panel-default">
+    <p class="panel panel-title text-center">
+      <i class="icon ion-android-arrow-dropup"></i>&nbsp;Initially sorted by Price
+    </p>                       
+<div class="panel-body">
+
+<table class="table table-hover table-heading" at-table at-paginated at-list="res.data.onwardflights" at-config="config">
+  <thead></thead>
+  <tbody>
+    <tr>           
+        <td at-implicit at-sortable at-attribute="deptime" width="150"></td>
+        <td at-implicit at-sortable at-title="Dur." at-attribute="duration" width="150">
+        </td>   
+        <td at-implicit at-sortable at-title="Arrival" at-attribute="arrtime" width="150">
+        </td>   
+        <td at-implicit at-title="Airline" at-attribute="airline" width="150">
+        </td>
+        <td at-implicit at-sortable at-title="Price" at-attribute="fare.totalfare" at-initial-sorting="asc" width="150">
+        </td>
+    </tr>
+  </tbody>
+</table>
+        <at-pagination at-list="res.data.onwardflights" at-config="config"></at-pagination> 
+                        
+                    </div>
+                </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view view-title="Details">
+  <ion-content>
+    <div class="panel panel-default">                
+<div class="panel-body">
+<table class="table table-hover table-heading" at-table at-paginated at-list="busresult.data.onwardflights" at-config="config">
+  <thead></thead>
+  <tbody>
+    <tr>           
+        <td at-implicit at-sortable at-attribute="DepartureTime" width="150" ></td>
+        <td at-implicit at-sortable at-title="Dur." at-attribute="duration" width="150">
+        </td>   
+        <td at-implicit at-sortable at-title="Arrival" at-attribute="ArrivalTime" width="150">
+        </td>
+        <td at-implicit at-title="Travels" at-attribute="TravelsName" width="150">
+        </td>
+<!--         <td at-implicit at-sortable at-attribute ="RouteSeatTypeDetail.list.SeatsAvailable" at-title="Seats" width="150">
+        </td> -->
+        <td at-implicit at-sortable at-title="Price" at-attribute="fare.totalfare" at-initial-sorting="asc" width="150">
+        </td>
+    </tr>
+  </tbody>
+</table>
+        <at-pagination at-list="busresult.data.onwardflights" at-config="config"></at-pagination> 
+                        
+                    </div>
+                </div>
+  </ion-content>
+</ion-view>

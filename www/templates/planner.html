@@ -1,0 +1,50 @@
+<ion-view view-title="Plan your Items To Pack">
+  <ion-content class="padding">
+      <div class="center ng-cloak animated slideInRight" ng-init="init()">
+      <div class="well">
+        <div class="badge" ng-show="totalDone>0"> {{totalDone}}/{{totalItems}} Done Packing Items</div>
+        <div class="badge" ng-show="totalDone==0"> No Items To Pack</div>
+        <br/>
+        <div class="input-group">
+          <input class="form-control" type="text" placeholder="Enter The Item " value="" ng-model="todoItem.description" />
+          <span class="input-group-btn">
+           <button class="btn btn-success" ng-disabled="todoItem.description==undefined" ng-click="addToDo(todoItem)">+</button>
+        </span>
+           </div>
+        <div class="well" >
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-success btn-xs" ng-disabled="totalDone==totalItems" ng-click="markAllDone()">Mark All Done</button>
+            <button type="button" class="btn btn-warning btn-xs" ng-disabled="totalDone==0" ng-click="markAllUnDone()">Mark All UnDone</button>
+            <button type="button" class="btn btn-danger btn-xs" ng-click="deleteAllItems()">Delete All</button>
+            <button type="button" class="btn btn-warning btn-xs" ng-click="init()">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div ng-hide="totalDone==0" class="input-group input-group-sm">
+        <span class="input-group-addon"><span class="ion-search"></span></span>
+        <input type="text" class="form-control" ng-model="todoSearch.name" placeholder="Search My List" aria-describedby="sizing-addon1"/>
+        
+      </div>
+      <table ng-show="todos.length>0" class="table table-hover">
+        
+          <tr>
+            <th><b>#</b></th>
+            <th><b>Description</b></th>
+            <th><b>Actions</b></th>
+          </tr>
+          <tbody>
+          <tr ng-class="{active: todo.isDone}" ng-repeat="todo in todos | filter:todoSearch.name">
+            <td>{{$index + 1}}</td>
+            <td ng-class="{done: todo.isDone}">{{todo.description}}</td>
+            <td>
+              <button class="btn btn-success btn-xs" ng-disabled="todo.isDone" ng-click="markDone($index)"><i ng-if="!todo.isDone"class="ion-android-done"></i>
+              <i ng-if="todo.isDone" class="ion-android-done-all"></i> Done</button>
+              <button class="btn btn-warning btn-xs" ng-disabled="!todo.isDone" ng-click="resetTodo($index)">Reset</button>
+              <button class="btn btn-danger btn-xs" ng-click="deleteItem($index)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ion-content>
+</ion-view>

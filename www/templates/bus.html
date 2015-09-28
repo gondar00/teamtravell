@@ -1,0 +1,48 @@
+<ion-view view-title="Bus-Fare">
+  <ion-content class="padding">
+<div class="container animated bounce">    
+        <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Search For Buses</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a ui-sref="app.playlists">Want To Search For Flights?</a></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body">
+        <div class="list">
+
+  <label class="item item-input">
+    <i class="icon ion-android-arrow-up placeholder-icon"></i>
+    <span class="input-label">From :</span>
+    <input type="text" ng-model="source" ng-init="source='bangalore'" placeholder="City">
+
+  </label>
+  <label class="item item-input">
+    <i class="icon ion-android-arrow-down placeholder-icon"></i>
+    <span class="input-label">To :</span>
+    <input type="text" ng-model="destination" ng-init="destination='hyderabad'" placeholder="City">
+  </label>
+<label class="item item-input">
+<i class="icon ion-ios-calendar-outline placeholder-icon"></i>
+  <span class="input-label">Depart :</span>
+  <input type="date" ng-model="depart">
+</label>
+<!-- <label class="item item-input">
+    <i class="icon ion-ios-calendar-outline placeholder-icon"></i>
+  <span class="input-label">Return :</span>
+  <input type="date" ng-model="return">
+</label> -->
+</div>
+<button class="button button-calm button-block pull-right" ui-sref = "app.bustrips" ng-model="fetch" ng-click="fetch(source,destination,depart)">
+  <i class="icon ion-android-search"></i>&nbsp;Search</button>
+            
+                         </div>
+                    </div>
+
+               
+               
+                
+         </div> 
+    </div>
+  </ion-content>
+</ion-view>

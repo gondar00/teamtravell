@@ -1,0 +1,87 @@
+<ion-view view-title="Budget-Fare-Planner">
+  <ion-content class="padding">
+  <div class="container-fluid animated bounce">
+<div class="panel panel-info">
+	<div class="panel-heading text-center">
+		<i class="icon ion-plane"></i>&nbsp;FLIGHTS</div>
+	<div class="panel-body">
+		<div class="list">
+		<!-- <button class="btn btn-info btn-xs"><i class="icon ion-plane"></i>&nbsp;Round Trip</button> -->
+		<button class="btn btn-default btn-xs"><i class="icon ion-android-plane"></i>&nbsp;One Way</button>
+		</div>
+<div class="list">
+  <label class="item item-input">
+  	<i class="icon ion-android-arrow-up placeholder-icon"></i>
+  	<span class="input-label">From :</span>
+    <input type="text" ng-model="source" ng-init="source='HYD'" placeholder="City or Airport">
+
+  </label>
+  <label class="item item-input">
+  	<i class="icon ion-android-arrow-down placeholder-icon"></i>
+  	<span class="input-label">To :</span>
+    <input type="text" ng-model="destination" ng-init="destination='DEL'" placeholder="City or Airport">
+  </label>
+<label class="item item-input">
+<i class="icon ion-ios-calendar-outline placeholder-icon"></i>
+  <span class="input-label">Depart :</span>
+  <input type="date" ng-model="depart">
+</label>
+<!-- <label class="item item-input">
+<i class="ion-ios-personadd-outline placeholder-icon"></i>
+  <span class="input-label">Travellers :</span>
+  <select ng-model="adults">
+  <option value='' disabled selected style='display:none;'>Adults (12+ Yrs)</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+</label> -->
+<!-- <label class="item item-input">
+	<i class="icon ion-ios-calendar-outline placeholder-icon"></i>
+  <span class="input-label">Return :</span>
+  <input type="date" ng-model="return" >
+</label>
+ --><label class="item item-input">
+  <i class="icon ion-card placeholder-icon"></i>
+  <span class="input-label">Class :</span>
+  <select ng-model="class">
+     <option value='' disabled selected style='display:none;'>Select The Class</option>
+  <option value="E" >Economy</option>
+  <option value="B" >Business</option>
+</select>
+</label>
+</div>
+<!-- <span class="badge">OPTIONAL</span><i class="icon ion-arrow-down-a"></i>
+<div class="list list-inset">
+<label class="item item-input">
+  <i class="icon ion-ios-home-outline placeholder-icon"></i>
+  <span class="input-label">Require Accommodation?</span>
+  <select ng-model="accommodation">
+     <option value='' disabled selected style='display:none;'>Select</option>
+  <option value="yes">👍Yes</option>
+  <option value="no">👎No</option>
+</select>
+</label>
+<label class="item item-input">
+  <i class="icon ion-model-s placeholder-icon"></i>
+  <span class="input-label">Require an Airport Pickup?</span>
+  <select ng-model="pickup">
+     <option value='' disabled selected style='display:none;'>Select</option>
+  <option value="yes" >👍Yes</option>
+  <option value="no" >👎No</option>
+</select>
+</label>
+</div> -->
+<button class="button button-calm button-block pull-right" ui-sref = "app.single" ng-model="fetch" ng-click="fetch(source,destination,depart,return,class)">
+  <i class="icon ion-android-search"></i>&nbsp;Search</button>
+</div>
+</div>
+</div>
+<!-- <span>[before]{{maxScore}}-[ON]{{names2.resource1.fare}}-[after]{{lowFare}}</span> -->
+<!-- <span ng-repeat = " x in result.resource1">{{x}}</span> -->
+  </ion-content>
+  <div class="bar bar-footer bar-balanced">
+  <div class="title">Created with ❤ by <a href="http://www.coderr.net" target="_blank">PiedPiper Team :D</a></div>
+</div>
+</ion-view>

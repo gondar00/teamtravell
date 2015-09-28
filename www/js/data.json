@@ -1,0 +1,7 @@
+[
+  {"description":"Flight Tickets", "isDone":false},
+  {"description":"Passport", "isDone":true},
+  {"description":"Medicines", "isDone":true},
+  {"description":"Camera", "isDone":false},
+  {"description":"Red Shirt For Meeting", "isDone":true}
+]

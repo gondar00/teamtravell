@@ -1,0 +1,71 @@
+<ion-view view-title="Best Price For The Team">
+  <ion-content>
+  <div class="panel panel-default animated fadeInRight" >
+  <div class="panel-heading text-center animated bounceIn">Lowest Fare Available</div>                
+<div class="panel-body">
+<!-- <div class="item item-divider">
+   <i class="ion-plane"></i> Lowest Fare For Your Team
+  </div> -->
+  	<!-- <i class="icon ion-android-arrow-up placeholder-icon"></i> -->
+<table class="table table-hover table-heading" at-table at-list="lowestFare" at-config="config">
+  <thead></thead>
+  <tbody>
+    <tr>
+<!--         <td at-implicit at-sortable at-title="Depature." at-attribute="extra" width="150"></td>
+        <td at-implicit at-sortable at-title="Dur." at-attribute="extra" width="150">
+        </td>   
+        <td at-implicit at-sortable at-title="Arrival" at-attribute="extra" width="150">
+        </td>    -->
+        <td at-implicit at-title="Airline" at-attribute="carrier">
+        </td>
+        <td at-implicit at-sortable at-title="Price For The Team" at-attribute="fare" at-initial-sorting="asc">
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+  <div class="panel panel-default animated fadeInLeft">
+  <div class="panel-heading text-center animated bounceIn">Best Hotels Available</div>                  
+<div class="panel-body">
+<!-- <div class="item item-divider">
+   <i class="ion-plane"></i> Lowest Fare For Your Team
+  </div> -->
+  	<!-- <i class="icon ion-android-arrow-up placeholder-icon"></i> -->
+<table class="table table-hover table-heading" at-table at-list="hotels.data" at-config="config">
+  <thead></thead>
+  <tbody>
+    <tr>
+<!--         <td at-implicit at-sortable at-title="Depature." at-attribute="extra" width="150"></td>
+        <td at-implicit at-sortable at-title="Dur." at-attribute="extra" width="150">
+        </td>   
+        <td at-implicit at-sortable at-title="Arrival" at-attribute="extra" width="150">
+        </td>    -->
+        <td at-implicit at-title="Hotel" at-attribute="hotel_data_node.name" width="150">
+        </td>
+        <td at-implicit at-title="Area" at-attribute="hotel_data_node.loc.city" width="150">
+        </td>
+        <td at-implicit at-sortable at-title="☆ Rating" at-attribute="hotel_data_node.rating" width="150">
+
+        </td>
+    </tr>
+  </tbody>
+</table>
+  </label>
+</div>
+</div>
+<div class="padding animated fadeInRight">
+<div class="page-header">
+  <h1>Also See: <small>More Options To Save Money</small></h1>
+</div>
+    <h4><span class="label label-success">Save Upto 33%</span><a ui-sref="app.playlists">Re-plan Your Journey Date </a><small>Recommendation <i class="ion-lightbulb"></i> Feature That Can Save You 1000's .</small></h4>
+
+    <h4><span class="label label-success">Save Upto 55%</span><a ui-sref="app.bus">
+    Travel By Bus</h4></a>
+
+    <h4><span class="label label-success">Never Forget a thing</span><a ui-sref="app.planner">
+    Manage Your Itinery</h4></a>
+
+</div>
+   </ion-content>
+</ion-view>
